@@ -1,10 +1,10 @@
 package data_structure.linked_list.cell;
 
 public class Cell<T>{
-    private Cell next;
+    private Cell<T> next;
     private T element;
 
-    public Cell(Cell next, T element) {
+    public Cell(Cell<T> next, T element) {
         this.next = next;
         this.element = element;
     }
@@ -13,11 +13,11 @@ public class Cell<T>{
         this.element = element;
     }
 
-    public void setNext(Cell next) {
+    public void setNext(Cell<T> next) {
         this.next = next;
     }
 
-    public Cell getNext() {
+    public Cell<T> getNext() {
         return next;
     }
 

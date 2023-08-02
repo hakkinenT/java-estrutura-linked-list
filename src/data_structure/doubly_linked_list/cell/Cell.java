@@ -15,11 +15,11 @@ public class Cell<T>{
         this.element = element;
     }
 
-    public void setNext(Cell next) {
+    public void setNext(Cell<T> next) {
         this.next = next;
     }
 
-    public Cell getNext() {
+    public Cell<T> getNext() {
         return next;
     }
 
