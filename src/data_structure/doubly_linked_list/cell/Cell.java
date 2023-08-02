@@ -5,6 +5,11 @@ public class Cell<T>{
     private Cell<T> next;
     private T element;
 
+    public Cell(Cell<T> next, T element) {
+        this.next = next;
+        this.element = element;
+    }
+
     public Cell(Cell<T> previous, Cell<T> next, T element) {
         this.previous = previous;
         this.next = next;
