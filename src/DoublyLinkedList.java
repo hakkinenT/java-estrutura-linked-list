@@ -28,6 +28,10 @@ public class DoublyLinkedList {
         System.out.println();
         System.out.println("==== CONTAINS ====");
         containsTest();
+
+        System.out.println();
+        System.out.println("==== REMOVE AT END ====");
+        removeAtEndTest();
     }
 
     public static void addAtBeginningTest(){
@@ -93,5 +97,16 @@ public class DoublyLinkedList {
 
         System.out.println(doublyLinkedList.contains("Paulo"));
         System.out.println(doublyLinkedList.contains("Camila"));
+    }
+
+    public static void removeAtEndTest(){
+        MyDoblyLinkedList<String> doublyLinkedList = new MyDoblyLinkedList<>();
+        doublyLinkedList.add("Paulo");
+        doublyLinkedList.add("Rafael");
+        doublyLinkedList.add("Camila");
+
+        doublyLinkedList.removeAtEnd();
+
+        System.out.println(doublyLinkedList);
     }
 }

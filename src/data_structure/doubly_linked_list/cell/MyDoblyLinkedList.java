@@ -97,7 +97,19 @@ public class MyDoblyLinkedList<T> {
         return false;
     }
 
-    public void remove(int position){}
+    public void remove(int position){
+        if(!occupiedPosition(0)){
+            throw new IllegalArgumentException("Posição não existe");
+        }
+
+        if(position == 0){
+            removeAtBeginning();
+        }else if(position == this.totalElement - 1){
+            removeAtEnd();
+        }else{
+
+        }
+    }
 
     public void removeAtBeginning(){
         if(!occupiedPosition(0)){
@@ -113,7 +125,18 @@ public class MyDoblyLinkedList<T> {
     }
 
     public void removeAtEnd(){
+        if(!occupiedPosition(this.totalElement - 1)){
+            throw new IllegalArgumentException("Posição não existe.");
+        }
 
+        if(this.totalElement == 1){
+            removeAtBeginning();
+        }else{
+            Cell<T> lastButOne = this.last.getPrevious();
+            lastButOne.setNext(null);
+            this.last = lastButOne;
+            this.totalElement--;
+        }
     }
 
     @Override
