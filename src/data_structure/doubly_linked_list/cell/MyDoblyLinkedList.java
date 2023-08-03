@@ -84,7 +84,18 @@ public class MyDoblyLinkedList<T> {
 
     public int length(){return this.totalElement;}
 
-    public boolean contains(T element){return false;}
+    public boolean contains(T element){
+        Cell<T> actual = this.first;
+
+        while (actual != null){
+            if(actual.getElement().equals(element)){
+                return true;
+            }
+
+            actual = actual.getNext();
+        }
+        return false;
+    }
 
     public void remove(int position){}
 

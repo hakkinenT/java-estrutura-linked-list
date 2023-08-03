@@ -24,6 +24,10 @@ public class DoublyLinkedList {
         System.out.println();
         System.out.println("==== GET ====");
         getTest();
+
+        System.out.println();
+        System.out.println("==== CONTAINS ====");
+        containsTest();
     }
 
     public static void addAtBeginningTest(){
@@ -80,5 +84,14 @@ public class DoublyLinkedList {
         doublyLinkedList.add("Rafael");
 
         System.out.println(doublyLinkedList.get(0));
+    }
+
+    public static void containsTest(){
+        MyDoblyLinkedList<String> doublyLinkedList = new MyDoblyLinkedList<>();
+        doublyLinkedList.add("Paulo");
+        doublyLinkedList.add("Rafael");
+
+        System.out.println(doublyLinkedList.contains("Paulo"));
+        System.out.println(doublyLinkedList.contains("Camila"));
     }
 }
