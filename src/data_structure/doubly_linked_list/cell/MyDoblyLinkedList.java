@@ -107,7 +107,14 @@ public class MyDoblyLinkedList<T> {
         }else if(position == this.totalElement - 1){
             removeAtEnd();
         }else{
+            Cell<T> prevCell = getCell(position - 1);
+            Cell<T> actualCell = prevCell.getNext();
+            Cell<T> nextCell = actualCell.getNext();
 
+            prevCell.setNext(nextCell);
+            nextCell.setPrevious(prevCell);
+
+            this.totalElement--;
         }
     }
 

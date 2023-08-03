@@ -32,6 +32,10 @@ public class DoublyLinkedList {
         System.out.println();
         System.out.println("==== REMOVE AT END ====");
         removeAtEndTest();
+
+        System.out.println();
+        System.out.println("==== REMOVE BY POSITION ====");
+        removeByPositionTest();
     }
 
     public static void addAtBeginningTest(){
@@ -106,6 +110,17 @@ public class DoublyLinkedList {
         doublyLinkedList.add("Camila");
 
         doublyLinkedList.removeAtEnd();
+
+        System.out.println(doublyLinkedList);
+    }
+
+    public static void removeByPositionTest(){
+        MyDoblyLinkedList<String> doublyLinkedList = new MyDoblyLinkedList<>();
+        doublyLinkedList.add("Paulo");
+        doublyLinkedList.add("Rafael");
+        doublyLinkedList.add("Camila");
+
+        doublyLinkedList.remove(1);
 
         System.out.println(doublyLinkedList);
     }
