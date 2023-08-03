@@ -21,7 +21,27 @@ public class MyDoblyLinkedList<T> {
     }
 
     public void add(int position, T element){
+        if(!occupiedPosition(position)){
+            throw new IllegalArgumentException("Posição não encontrada.");
+        }
 
+        if(position == 0){
+            addAtBeginning(element);
+        }else if(position == this.totalElement){
+            add(element);
+        }else{
+            Cell<T> prevCell = getCell(position - 1);
+            Cell<T> nextCell = prevCell.getNext();
+
+            Cell<T> newCell = new Cell<>(prevCell.getNext(),element);
+
+            newCell.setPrevious(prevCell);
+
+            prevCell.setNext(newCell);
+            nextCell.setPrevious(newCell);
+
+            this.totalElement++;
+        }
     }
 
     public void addAtBeginning(T element){
