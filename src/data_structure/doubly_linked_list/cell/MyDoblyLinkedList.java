@@ -6,7 +6,19 @@ public class MyDoblyLinkedList<T> {
 
     private int totalElement;
 
-    public void add(T element){}
+    public void add(T element){
+        if(this.totalElement == 0){
+            addAtBeginning(element);
+        }else{
+            Cell<T> newCell = new Cell<>(element);
+            this.last.setNext(newCell);
+            newCell.setPrevious(this.last);
+            this.last = newCell;
+            this.totalElement++;
+        }
+
+
+    }
 
     public void add(int position, T element){
 
@@ -26,26 +38,6 @@ public class MyDoblyLinkedList<T> {
         }
 
         this.totalElement++;
-    }
-
-    @Override
-    public String toString() {
-        if(this.totalElement == 0){
-            return "[]";
-        }
-
-        StringBuilder builder = new StringBuilder("[");
-        Cell<T> actual = first;
-
-        for (int i = 0; i < this.totalElement - 1; i++) {
-            builder.append(actual.getElement());
-            builder.append(", ");
-            actual = actual.getNext();
-        }
-
-        builder.append(actual.getElement());
-        builder.append("]");
-        return builder.toString();
     }
 
     private Cell<T> getCell(int position){
@@ -79,4 +71,24 @@ public class MyDoblyLinkedList<T> {
     public void removeAtBeginning(){}
 
     public void removeAtEnd(){}
+
+    @Override
+    public String toString() {
+        if(this.totalElement == 0){
+            return "[]";
+        }
+
+        StringBuilder builder = new StringBuilder("[");
+        Cell<T> actual = first;
+
+        for (int i = 0; i < this.totalElement - 1; i++) {
+            builder.append(actual.getElement());
+            builder.append(", ");
+            actual = actual.getNext();
+        }
+
+        builder.append(actual.getElement());
+        builder.append("]");
+        return builder.toString();
+    }
 }
