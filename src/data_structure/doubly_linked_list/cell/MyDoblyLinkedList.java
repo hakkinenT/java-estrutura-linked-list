@@ -88,7 +88,18 @@ public class MyDoblyLinkedList<T> {
 
     public void remove(int position){}
 
-    public void removeAtBeginning(){}
+    public void removeAtBeginning(){
+        if(!occupiedPosition(0)){
+            throw new IllegalArgumentException("Posição não existe");
+        }
+
+        this.first = this.first.getNext();
+        this.totalElement--;
+
+        if(this.totalElement == 0){
+            this.last = null;
+        }
+    }
 
     public void removeAtEnd(){}
 
