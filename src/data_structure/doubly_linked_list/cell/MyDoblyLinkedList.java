@@ -79,7 +79,7 @@ public class MyDoblyLinkedList<T> {
     }
 
     public T get(int position){
-        return null;
+        return getCell(position).getElement();
     }
 
     public int length(){return this.totalElement;}

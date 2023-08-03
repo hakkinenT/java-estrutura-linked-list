@@ -19,7 +19,11 @@ public class DoublyLinkedList {
 
         System.out.println();
         System.out.println("==== LENGTH ====");
-        length();
+        lengthTest();
+
+        System.out.println();
+        System.out.println("==== GET ====");
+        getTest();
     }
 
     public static void addAtBeginningTest(){
@@ -58,7 +62,7 @@ public class DoublyLinkedList {
         System.out.println(doublyLinkedList);
     }
 
-    public static void length(){
+    public static void lengthTest(){
         MyDoblyLinkedList<String> doublyLinkedList = new MyDoblyLinkedList<>();
         doublyLinkedList.add("Paulo");
         doublyLinkedList.add("Rafael");
@@ -68,5 +72,13 @@ public class DoublyLinkedList {
         doublyLinkedList.add("Camila");
 
         System.out.println(doublyLinkedList.length());
+    }
+
+    public static void getTest(){
+        MyDoblyLinkedList<String> doublyLinkedList = new MyDoblyLinkedList<>();
+        doublyLinkedList.add("Paulo");
+        doublyLinkedList.add("Rafael");
+
+        System.out.println(doublyLinkedList.get(0));
     }
 }
