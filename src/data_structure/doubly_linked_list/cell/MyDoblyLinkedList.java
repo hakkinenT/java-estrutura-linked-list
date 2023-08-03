@@ -82,7 +82,7 @@ public class MyDoblyLinkedList<T> {
         return null;
     }
 
-    public int length(){return 0;}
+    public int length(){return this.totalElement;}
 
     public boolean contains(T element){return false;}
 
@@ -101,7 +101,9 @@ public class MyDoblyLinkedList<T> {
         }
     }
 
-    public void removeAtEnd(){}
+    public void removeAtEnd(){
+
+    }
 
     @Override
     public String toString() {

@@ -16,6 +16,10 @@ public class DoublyLinkedList {
         System.out.println();
         System.out.println("==== REMOVE AT BEGINNING ====");
         removeAtBeginningTest();
+
+        System.out.println();
+        System.out.println("==== LENGTH ====");
+        length();
     }
 
     public static void addAtBeginningTest(){
@@ -52,5 +56,17 @@ public class DoublyLinkedList {
         doublyLinkedList.removeAtBeginning();
 
         System.out.println(doublyLinkedList);
+    }
+
+    public static void length(){
+        MyDoblyLinkedList<String> doublyLinkedList = new MyDoblyLinkedList<>();
+        doublyLinkedList.add("Paulo");
+        doublyLinkedList.add("Rafael");
+
+        System.out.println(doublyLinkedList.length());
+
+        doublyLinkedList.add("Camila");
+
+        System.out.println(doublyLinkedList.length());
     }
 }
