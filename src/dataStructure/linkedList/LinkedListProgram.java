@@ -1,6 +1,6 @@
-import data_structure.linked_list.MyLinkedList;
+package dataStructure.linkedList;
 
-public class LinkedList {
+public class LinkedListProgram {
     public static void main(String[] args) {
 
         System.out.println("==== ADD AT THE END ====");

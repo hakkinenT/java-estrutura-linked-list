@@ -1,4 +1,6 @@
-package data_structure.doubly_linked_list.cell;
+package dataStructure.doublyLinkedList;
+
+import dataStructure.doublyLinkedList.cell.Cell;
 
 public class MyDoblyLinkedList<T> {
     private Cell<T> first;

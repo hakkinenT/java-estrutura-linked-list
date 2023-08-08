@@ -1,4 +1,4 @@
-package data_structure.linked_list.cell;
+package dataStructure.linkedList.cell;
 
 public class Cell<T>{
     private Cell<T> next;

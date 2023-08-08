@@ -1,6 +1,6 @@
-package data_structure.linked_list;
+package dataStructure.linkedList;
 
-import data_structure.linked_list.cell.Cell;
+import dataStructure.linkedList.cell.Cell;
 
 public class MyLinkedList<T> {
     private Cell<T> first;

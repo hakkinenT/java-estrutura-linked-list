@@ -1,6 +1,8 @@
-import data_structure.doubly_linked_list.cell.MyDoblyLinkedList;
+package dataStructure.doublyLinkedList;
 
-public class DoublyLinkedList {
+import dataStructure.doublyLinkedList.MyDoblyLinkedList;
+
+public class DoublyLinkedListProgram {
     public static void main(String[] args) {
         System.out.println("==== ADD AT THE BEGINNING ====");
         addAtBeginningTest();

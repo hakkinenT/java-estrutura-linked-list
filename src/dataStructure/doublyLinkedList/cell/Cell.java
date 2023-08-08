@@ -1,4 +1,4 @@
-package data_structure.doubly_linked_list.cell;
+package dataStructure.doublyLinkedList.cell;
 
 public class Cell<T>{
     private Cell<T> previous;
